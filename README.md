@@ -4,6 +4,8 @@
 
 这是一个基于 FastAPI-MCP 的股票分析服务，修改自开源软件，旨在通过 MCP 工具函数接口提供股票相关的综合数据和分析能力，包括价格、评分、技术报告和 AI 分析。该服务整合了原有项目 [https://github.com/lanzhihong6/stock-scanner](https://github.com/lanzhihong6/stock-scanner/) 中的股票数据获取和分析功能，并提供了现代化的 API 接口，作为前端与后端服务之间的桥梁。
 
+项目中分别实现了本地集成式 MCP 服务与远程 MCP 工具服务两种部署方式。前者将 MCP 能力直接嵌入 FastAPI 应用内部，适用于单体应用与本地智能体调用；后者将 MCP 作为独立的远程服务对外暴露，可被多个 AI Agent 或客户端统一调用，体现了 MCP 在工具服务化与跨应用协作中的优势。
+
 ## 功能特点
 
 - **基于 FastAPI-MCP 构建**: 支持 SSE 协议，提供强大的 API 接口。
@@ -158,4 +160,5 @@ print(ai_analysis_result)
 
 ```
 http://localhost:8000/docs
+
 ```
